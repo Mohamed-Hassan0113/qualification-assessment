@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import authRoutes from "./routes/authRoutes";
+import orgRoutes from "./routes/orgRoutes";
 
 
 const app: Application = express();
@@ -17,6 +18,7 @@ app.use(cookieParser());
 
 
 app.use("/", authRoutes);
+app.use("/organization", orgRoutes);
 
 
 const PORT = 8080;
